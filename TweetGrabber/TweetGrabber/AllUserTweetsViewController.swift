@@ -1,23 +1,28 @@
 //
-//  HomeTimeLineViewController.swift
+//  AllUserTweetsViewController.swift
 //  TweetGrabber
 //
-//  Created by Ed Abrahamsen on 3/30/15.
+//  Created by Ed Abrahamsen on 4/4/15.
 //  Copyright (c) 2015 Ed Abrahamsen. All rights reserved.
 //
 
 import UIKit
 
-class HomeTimeLineViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+class AllUserTweetsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+  
   @IBOutlet var tableView: UITableView!
   @IBOutlet weak var activityIndicator: UIActivityIndicatorView!
   
   var tweets:[Tweet]?
   let getMyTweets = GetMyTweets()
   let getImages = GetImages()
-  let homeTimelineURL = "https://api.twitter.com/1.1/statuses/home_timeline.json"
-
+  var name = ""
+  var handle = ""
+  var bio = ""
+  var screenName = ""
+  var backgroundImageURL = ""
+  var location = ""
+  var allTweetsURL = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name="
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -26,35 +31,46 @@ class HomeTimeLineViewController: UIViewController, UITableViewDataSource, UITab
     self.tableView.registerNib(nib, forCellReuseIdentifier: "TweetCell")
     self.tableView.dataSource = self
     self.tableView.delegate = self
-    self.tableView.estimatedRowHeight = 50
+    self.tableView.estimatedRowHeight = 4
     self.tableView.rowHeight = UITableViewAutomaticDimension
-    self.navigationController?.hidesBarsOnSwipe = true
+    self.tableView.userInteractionEnabled = false
     self.activityIndicator.hidesWhenStopped = true
     self.activityIndicator.startAnimating()
-    self.tableView.userInteractionEnabled = false
+    self.navigationController?.hidesBarsOnSwipe = true
     
-   GetAccount.AccountTypeTwitter { (twitterAccount, errorDescription) -> Void in
-      if twitterAccount != nil {
-          GetMyTweets.sharedGetTweets.twitterAccount = twitterAccount
-          let requestURL = NSURL(string: self.homeTimelineURL)
-          
-          GetMyTweets.sharedGetTweets.fetchHomeTimelineUser(requestURL!, { (tweets, errorDescription) -> Void in
-            if errorDescription != nil {
-            println(errorDescription)
-            return
-            }
-
-            if tweets != nil {
-              self.tweets = tweets
-              self.tableView.reloadData()
-              self.title = "Tweet Grabber"
-              self.tableView.userInteractionEnabled = true
-              self.activityIndicator.stopAnimating()
-            }
-          })
-        }
+    allTweetsURL = self.allTweetsURL + self.screenName
+    let requestURL = NSURL(string: allTweetsURL)
+    
+    GetMyTweets.sharedGetTweets.fetchHomeTimelineUser(requestURL!, { (tweets, errorDescription) -> Void in
+      if errorDescription != nil {
+        println(errorDescription)
+        return
       }
-    }
+      
+      if tweets != nil {
+        self.tweets = tweets
+        self.tableView.reloadData()
+        self.title = "Tweet Grabber"
+        self.tableView.userInteractionEnabled = true
+         self.activityIndicator.stopAnimating()
+      }
+    })
+  }
+  
+  func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+    let headerCell = tableView.dequeueReusableCellWithIdentifier("HeaderCell") as CustomHeaderCell
+    
+    let url = NSURL(string: backgroundImageURL )
+    let imageData = NSData(contentsOfURL: url!)
+    headerCell.backgroungImage.image = UIImage(data: imageData!)
+    
+    let screenName = "@" + self.screenName
+    headerCell.nameLabel.text = self.name
+    headerCell.handleLabel.text = screenName
+    headerCell.bioLabel.text = self.bio
+    headerCell.locationLabel.text = self.location
+    return headerCell
+  }
   
   func tableView(tableView: UITableView, numberOfRowsInSection: Int) -> Int {
     if let tweetCount = self.tweets?.count {
@@ -73,7 +89,7 @@ class HomeTimeLineViewController: UIViewController, UITableViewDataSource, UITab
       cell.nameLabel?.text = "User " + "\""  + tweet.name + "\"" + " wrote:"
       cell.tweetLabel?.text = tweet.text
       cell.userImageView?.image = tweet.image
-        
+  
       if let image = tweet.image {
         cell.userImageView.image = image
       } else {
@@ -88,15 +104,6 @@ class HomeTimeLineViewController: UIViewController, UITableViewDataSource, UITab
       }
     }
     cell.layoutIfNeeded()
-      return cell
+    return cell
   }
-  
-  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-    let viewController = self.storyboard!.instantiateViewControllerWithIdentifier("TweetInfoVC") as SelectedTweetViewController
-    let selectedTweet = self.tweets![indexPath.row]
-    viewController.selectedTweet = selectedTweet
-      
-    self.navigationController?.pushViewController(viewController, animated: false)
-    self.title = "Home"
-   }
 }
