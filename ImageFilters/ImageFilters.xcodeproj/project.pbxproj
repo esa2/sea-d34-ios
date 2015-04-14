@@ -9,8 +9,15 @@
 /* Begin PBXBuildFile section */
 		F40DE01F1AD463D800069DBD /* IMG_0256.PNG in Resources */ = {isa = PBXBuildFile; fileRef = F40DE01E1AD463D800069DBD /* IMG_0256.PNG */; };
 		F41082E71AD4918800398751 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41082E61AD4918800398751 /* Constants.swift */; };
+		F4261B441ADA3789000C87D2 /* FilterViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4261B431ADA3789000C87D2 /* FilterViewCell.swift */; };
+		F42EDF101ADAFC2A0064DCAF /* TimeLineCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F42EDF0F1ADAFC2A0064DCAF /* TimeLineCell.swift */; };
+		F45CE7071AD4C965002A438D /* TimeLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45CE7061AD4C965002A438D /* TimeLineViewController.swift */; };
+		F45CE70B1AD4D54F002A438D /* ParseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45CE70A1AD4D54F002A438D /* ParseService.swift */; };
+		F45CE70D1AD4D593002A438D /* ImageResizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F45CE70C1AD4D593002A438D /* ImageResizer.swift */; };
+		F47DBE621AD81F4B000C331C /* CollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F47DBE611AD81F4B000C331C /* CollectionViewController.swift */; };
+		F48FEA901AD97C3F002EBAE3 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F48FEA8F1AD97C3F002EBAE3 /* CollectionViewCell.swift */; };
 		F4C29D8A1AD374B000AB8979 /* PhotoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4C29D891AD374B000AB8979 /* PhotoViewController.swift */; };
-		F4C29D8C1AD37D4300AB8979 /* photo-1425036458755-dc303a604201.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4C29D8B1AD37D4300AB8979 /* photo-1425036458755-dc303a604201.jpg */; };
+		F4C29D8C1AD37D4300AB8979 /* nightview.jpg in Resources */ = {isa = PBXBuildFile; fileRef = F4C29D8B1AD37D4300AB8979 /* nightview.jpg */; };
 		F4D381F71AD367E8000719D4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4D381F61AD367E8000719D4 /* AppDelegate.swift */; };
 		F4D381FC1AD367E8000719D4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4D381FA1AD367E8000719D4 /* Main.storyboard */; };
 		F4D381FE1AD367E8000719D4 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4D381FD1AD367E8000719D4 /* Images.xcassets */; };
@@ -49,8 +56,15 @@
 /* Begin PBXFileReference section */
 		F40DE01E1AD463D800069DBD /* IMG_0256.PNG */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = IMG_0256.PNG; sourceTree = "<group>"; };
 		F41082E61AD4918800398751 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F4261B431ADA3789000C87D2 /* FilterViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterViewCell.swift; sourceTree = "<group>"; };
+		F42EDF0F1ADAFC2A0064DCAF /* TimeLineCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineCell.swift; sourceTree = "<group>"; };
+		F45CE7061AD4C965002A438D /* TimeLineViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimeLineViewController.swift; sourceTree = "<group>"; };
+		F45CE70A1AD4D54F002A438D /* ParseService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParseService.swift; sourceTree = "<group>"; };
+		F45CE70C1AD4D593002A438D /* ImageResizer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageResizer.swift; sourceTree = "<group>"; };
+		F47DBE611AD81F4B000C331C /* CollectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewController.swift; sourceTree = "<group>"; };
+		F48FEA8F1AD97C3F002EBAE3 /* CollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		F4C29D891AD374B000AB8979 /* PhotoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoViewController.swift; sourceTree = "<group>"; };
-		F4C29D8B1AD37D4300AB8979 /* photo-1425036458755-dc303a604201.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "photo-1425036458755-dc303a604201.jpg"; sourceTree = "<group>"; };
+		F4C29D8B1AD37D4300AB8979 /* nightview.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = nightview.jpg; sourceTree = "<group>"; };
 		F4D381F11AD367E8000719D4 /* ImageFilters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageFilters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F4D381F51AD367E8000719D4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F4D381F61AD367E8000719D4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -78,7 +92,7 @@
 		F4EEE7EA1AD480BF00C9411A /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtils.framework; path = "ImageFilters/parse-library-1.7.1/ParseFacebookUtils.framework"; sourceTree = "<group>"; };
 		F4EEE7EB1AD480BF00C9411A /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseFacebookUtilsV4.framework; path = "ImageFilters/parse-library-1.7.1/ParseFacebookUtilsV4.framework"; sourceTree = "<group>"; };
 		F4EEE7EC1AD480BF00C9411A /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = "ImageFilters/parse-library-1.7.1/ParseUI.framework"; sourceTree = "<group>"; };
-		F4EEE7F41AD4810900C9411A /* ImageFilters-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageFilters-Bridging-Header.h"; sourceTree = "<group>"; };
+		F4EEE7F41AD4810900C9411A /* ImageFilters-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ImageFilters-Bridging-Header.h"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				F4D381F51AD367E8000719D4 /* Info.plist */,
+				F4EEE7F41AD4810900C9411A /* ImageFilters-Bridging-Header.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -176,6 +191,8 @@
 			children = (
 				F4D382161AD36C8A000719D4 /* FilterService.swift */,
 				F41082E61AD4918800398751 /* Constants.swift */,
+				F45CE70A1AD4D54F002A438D /* ParseService.swift */,
+				F45CE70C1AD4D593002A438D /* ImageResizer.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -184,9 +201,12 @@
 			isa = PBXGroup;
 			children = (
 				F4D381FA1AD367E8000719D4 /* Main.storyboard */,
+				F4261B431ADA3789000C87D2 /* FilterViewCell.swift */,
+				F48FEA8F1AD97C3F002EBAE3 /* CollectionViewCell.swift */,
+				F42EDF0F1ADAFC2A0064DCAF /* TimeLineCell.swift */,
 				F4D381FF1AD367E8000719D4 /* LaunchScreen.xib */,
 				F4D381FD1AD367E8000719D4 /* Images.xcassets */,
-				F4C29D8B1AD37D4300AB8979 /* photo-1425036458755-dc303a604201.jpg */,
+				F4C29D8B1AD37D4300AB8979 /* nightview.jpg */,
 				F40DE01E1AD463D800069DBD /* IMG_0256.PNG */,
 			);
 			name = Views;
@@ -196,6 +216,8 @@
 			isa = PBXGroup;
 			children = (
 				F4C29D891AD374B000AB8979 /* PhotoViewController.swift */,
+				F45CE7061AD4C965002A438D /* TimeLineViewController.swift */,
+				F47DBE611AD81F4B000C331C /* CollectionViewController.swift */,
 				F4D381F61AD367E8000719D4 /* AppDelegate.swift */,
 			);
 			name = Controllers;
@@ -221,7 +243,6 @@
 				F4EEE7D51AD47F9F00C9411A /* CoreGraphics.framework */,
 				F4EEE7D31AD47F9000C9411A /* CFNetwork.framework */,
 				F4EEE7D11AD47F6700C9411A /* AudioToolbox.framework */,
-				F4EEE7F41AD4810900C9411A /* ImageFilters-Bridging-Header.h */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -307,7 +328,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4D381FC1AD367E8000719D4 /* Main.storyboard in Resources */,
-				F4C29D8C1AD37D4300AB8979 /* photo-1425036458755-dc303a604201.jpg in Resources */,
+				F4C29D8C1AD37D4300AB8979 /* nightview.jpg in Resources */,
 				F4D382011AD367E8000719D4 /* LaunchScreen.xib in Resources */,
 				F40DE01F1AD463D800069DBD /* IMG_0256.PNG in Resources */,
 				F4D381FE1AD367E8000719D4 /* Images.xcassets in Resources */,
@@ -328,9 +349,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F42EDF101ADAFC2A0064DCAF /* TimeLineCell.swift in Sources */,
+				F48FEA901AD97C3F002EBAE3 /* CollectionViewCell.swift in Sources */,
+				F47DBE621AD81F4B000C331C /* CollectionViewController.swift in Sources */,
 				F4D381F71AD367E8000719D4 /* AppDelegate.swift in Sources */,
+				F45CE70B1AD4D54F002A438D /* ParseService.swift in Sources */,
+				F4261B441ADA3789000C87D2 /* FilterViewCell.swift in Sources */,
+				F45CE70D1AD4D593002A438D /* ImageResizer.swift in Sources */,
 				F4D382171AD36C8A000719D4 /* FilterService.swift in Sources */,
 				F4C29D8A1AD374B000AB8979 /* PhotoViewController.swift in Sources */,
+				F45CE7071AD4C965002A438D /* TimeLineViewController.swift in Sources */,
 				F41082E71AD4918800398751 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -407,7 +435,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -444,7 +472,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";

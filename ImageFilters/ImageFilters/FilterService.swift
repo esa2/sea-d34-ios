@@ -8,73 +8,74 @@
 import UIKit
 import CoreImage
 
+var inLightTunnel = false
+let xCoordinate: CGFloat = 150.0
+let yCoordinate: CGFloat = 150.0
+let scalarValue: CGFloat = 150.0
+
 class FilterService {
   
-  class func lightTunnel(originalImage: UIImage) -> UIImage {
-    
-    let image = CIImage(image: originalImage)
+  class func glassDistortion(originalImage: UIImage, context: CIContext) -> UIImage {
+    let glassDistortion = CIFilter(name: "CIGlassDistortion")
+    let textureImage = CIImage(image: originalImage)
+    glassDistortion.setValue(textureImage, forKey: "inputTexture")
+    let vector = CIVector(x: xCoordinate, y: yCoordinate)
+    glassDistortion.setValue(vector, forKey: kCIInputCenterKey)
+    glassDistortion.setValue(scalarValue, forKey: kCIInputScaleKey)
+    return self.filterImage(originalImage, filter: glassDistortion, context: context)
+    }
+
+  class func colorInvert(originalImage: UIImage, context: CIContext) -> UIImage {
+    let colorInvert = CIFilter(name: "CIColorInvert")
+    return self.filterImage(originalImage, filter: colorInvert, context: context)
+  }
+  
+  class func sepia(originalImage: UIImage, context: CIContext) -> UIImage {
+    let sepia = CIFilter(name: "CISepiaTone")
+    return self.filterImage(originalImage, filter: sepia, context: context)
+  }
+  
+  class func instant(originalImage: UIImage, context: CIContext) -> UIImage {
+    let instant = CIFilter(name: "CIPhotoEffectInstant")
+    instant.setDefaults()
+    return self.filterImage(originalImage, filter: instant, context: context)
+    }
+  
+  class func chrome(originalImage: UIImage, context: CIContext) -> UIImage {
+    let chrome = CIFilter(name: "CIPhotoEffectChrome")
+    chrome.setDefaults()
+    return self.filterImage(originalImage, filter: chrome, context: context)
+    }
+  
+  class func noir(originalImage: UIImage, context: CIContext) -> UIImage {
+    let noir = CIFilter(name: "CIPhotoEffectNoir")
+    noir.setDefaults()
+    return self.filterImage(originalImage, filter: noir, context: context)
+  }
+  
+  class func lightTunnel(originalImage: UIImage, context: CIContext) -> UIImage {
+    inLightTunnel = true
     let lightTunnel = CIFilter(name: "CILightTunnel")
-    
-    lightTunnel.setDefaults()
-    lightTunnel.setValue(image, forKey: kCIInputImageKey)
-    let vector = CIVector(x: 150, y: 150)
+    let vector = CIVector(x: xCoordinate, y: yCoordinate)
     lightTunnel.setValue(vector, forKey: kCIInputCenterKey)
-    lightTunnel.setValue(100.00, forKey: kCIInputRadiusKey)
-    let result = lightTunnel.valueForKey(kCIOutputImageKey) as CIImage
-    
+    lightTunnel.setValue(scalarValue, forKey: kCIInputRadiusKey)
     for input in lightTunnel.inputKeys() {
       println(input)
     }
-    
-    let options = [kCIContextWorkingColorSpace: NSNull()]
-    let eaglContext = EAGLContext(API: EAGLRenderingAPI.OpenGLES2)
-    let context = CIContext(EAGLContext: eaglContext, options: options)
-    let rect = CGRect(origin: CGPointZero, size: originalImage.size)
-    let resultRef = context.createCGImage(result, fromRect: rect)
-    return UIImage(CGImage: resultRef)!
-  }
-
-  class func glassDistortion(originalImage: UIImage) -> UIImage {
-    
-    let image = CIImage(image: originalImage)
-    let glassDistortion = CIFilter(name: "CIGlassDistortion")
-    glassDistortion.setDefaults()
-    glassDistortion.setValue(image, forKey: kCIInputImageKey)
-    let textureImage = CIImage(image: originalImage)
-    glassDistortion.setValue(textureImage, forKey: "inputTexture")
-    let vector = CIVector(x: 150, y: 150)
-    glassDistortion.setValue(vector, forKey: kCIInputCenterKey)
-    glassDistortion.setValue(200.00, forKey: kCIInputScaleKey)
-    let result = glassDistortion.valueForKey(kCIOutputImageKey) as CIImage
-      
-    for input in glassDistortion.inputKeys() {
-      println(input)
-    }
-
-    let options = [kCIContextWorkingColorSpace: NSNull()]
-    let eaglContext = EAGLContext(API: EAGLRenderingAPI.OpenGLES2)
-    let context = CIContext(EAGLContext: eaglContext, options: options)
-    let resultRef = context.createCGImage(result, fromRect: result.extent())
-    return UIImage(CGImage: resultRef)!
+    return self.filterImage(originalImage, filter: lightTunnel, context: context)
   }
   
-  class func colorInvert(originalImage: UIImage) -> UIImage {
-    
+  private class func filterImage(originalImage: UIImage, filter: CIFilter, context: CIContext) -> UIImage {
     let image = CIImage(image: originalImage)
-    let colorInvert = CIFilter(name: "CIColorInvert")
-    colorInvert.setDefaults()
-    colorInvert.setValue(image, forKey: kCIInputImageKey)
-    let result = colorInvert.valueForKey(kCIOutputImageKey) as CIImage
-    
-    for input in colorInvert.inputKeys() {
-      println(input)
+    filter.setValue(image, forKey: kCIInputImageKey)
+    let result = filter.valueForKey(kCIOutputImageKey) as! CIImage
+    if inLightTunnel == false {
+      let resultRef = context.createCGImage(result, fromRect: result.extent())
+      return UIImage(CGImage: resultRef)!
+    } else {
+      let rect = CGRect(origin: CGPointZero, size: originalImage.size)
+      let resultRef = context.createCGImage(result, fromRect: rect)
+      return UIImage(CGImage: resultRef)!            
     }
-    
-    let options = [kCIContextWorkingColorSpace: NSNull()]
-    let eaglContext = EAGLContext(API: EAGLRenderingAPI.OpenGLES2)
-    let context = CIContext(EAGLContext: eaglContext, options: options)
-    
-    let resultRef = context.createCGImage(result, fromRect: result.extent())
-    return UIImage(CGImage: resultRef)!
   }
 }
