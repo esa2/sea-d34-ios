@@ -7,11 +7,14 @@
 //
 import UIKit
 
-class ToUserDetailViewController: NSObject, UIViewControllerAnimatedTransitioning {
 
-  let duration = 0.3
+
+class ToUserDetailViewController: NSObject, UIViewControllerAnimatedTransitioning {
+  
+  let animationDuration: NSTimeInterval = 0.3
+  
   func transitionDuration(transitionContext: UIViewControllerContextTransitioning) -> NSTimeInterval {
-    return 0.3
+    return self.animationDuration
   }
   
   func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
@@ -34,7 +37,7 @@ class ToUserDetailViewController: NSObject, UIViewControllerAnimatedTransitionin
     let frame = containerView.convertRect(toVC.imageView.frame, fromView: toVC.view)
     toVC.imageView.hidden = true
     
-    UIView.animateWithDuration(duration, animations: { () -> Void in
+    UIView.animateWithDuration(animationDuration, animations: { () -> Void in
       toVC.view.alpha = 1
       snapShot.frame = frame
     })

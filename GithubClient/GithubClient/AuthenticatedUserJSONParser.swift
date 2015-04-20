@@ -1,5 +1,5 @@
 //
-//  LoggedInUserJSONParser.swift
+//  AuthenticatedUserJSONParser.swift
 //  GithubClient
 //
 //  Created by Ed Abrahamsen on 4/17/15.
@@ -8,15 +8,16 @@
 
 import Foundation
 
-class LoggedInUserJSONParser {
+class AuthenticatedUserJSONParser {
   
-  class func parseJSON(jsonData: NSData) -> LoggedInUserGitData {
+  class func parseJSON(jsonData: NSData) -> AuthenticatedUserGitData {
     
-  //  var parse = LoggedInUserGitData()
-    var gitUserData = LoggedInUserGitData(name: "name", location: "location", email: "email")
+  //  var parse = AuthenticatedUserGitData()
+    var gitUserData = AuthenticatedUserGitData(name: "name", location: "location", email: "email")
     var jsonError: NSError?
     
     if let jsonDictionary: AnyObject = NSJSONSerialization.JSONObjectWithData(jsonData, options: nil, error: &jsonError) {
+      println(jsonDictionary)
       if let name: AnyObject? = jsonDictionary["name"] {
         gitUserData.name = name as! String
       }
@@ -35,6 +36,9 @@ class LoggedInUserJSONParser {
       
       if let publicRepos: AnyObject? = jsonDictionary["public_repos"] {
         gitUserData.publicRepos = publicRepos as? Int
+      }
+      if let privateRepos: AnyObject? = jsonDictionary["total_private_repos"] {
+        gitUserData.privateRepos = privateRepos as? Int
       }
     }
     return gitUserData

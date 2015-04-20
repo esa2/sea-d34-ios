@@ -55,17 +55,11 @@ class UserSearchViewController: UIViewController, UICollectionViewDataSource, UI
     
     if user.avatarImage != nil {
       cell.imageView.image = user.avatarImage
-     } else {
+    } else {
       self.imageDownloadService.downloadImageForURL(user.repoAvatarUrl, completionHandler: { (downloadedImage) -> (Void) in
         let resizedImage = ImageResizer.resizeImage(downloadedImage!, size: self.thumbnailSize)
-  //     cell.imageView.alpha = 0
-  //     cell.imageView.transform = CGAffineTransformMakeScale(2.0, 2.0)
-          user.avatarImage = resizedImage
-          cell.imageView.image = resizedImage
-  //     UIView.animateWithDuration(0.4, animations: { () -> Void in
-  //     cell.imageView.alpha = 1
-  //     cell.imageView.transform = CGAffineTransformMakeScale(1.0, 1.0)
-  //     })
+        user.avatarImage = resizedImage
+        cell.imageView.image = resizedImage
       })
     }
     

@@ -1,5 +1,5 @@
 //
-//  LoggedInUserGitData.swift
+//  AuthenticatedUserGitData.swift
 //  GithubClient
 //
 //  Created by Ed Abrahamsen on 4/17/15.
@@ -7,7 +7,7 @@
 //
 import Foundation
 
-class LoggedInUserGitData {
+class AuthenticatedUserGitData {
   
   var hireable: Bool?
   var publicRepos: Int?

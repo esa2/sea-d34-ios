@@ -18,7 +18,7 @@ class MyProfileViewController: UIViewController {
   @IBOutlet weak var privateRepoLabel: UILabel!
   
   let githubService = GithubService()
-  var selectedUser: LoggedInUserGitData!
+  var selectedUser: AuthenticatedUserGitData!
   
   override func viewDidLoad() {
     super.viewDidLoad()

@@ -10,6 +10,7 @@ import Foundation
 class GithubService {
   
   static let sharedInstance: GithubService = GithubService()
+  let goodHttpResponse = 200
   
   // let localUrl = "http://127.0.0.1:3000"
   
@@ -26,7 +27,7 @@ class GithubService {
       
       if let httpResponse = response as? NSHTTPURLResponse {
         println(httpResponse.statusCode)
-        if httpResponse.statusCode == 200 {
+        if httpResponse.statusCode == self.goodHttpResponse {
           let parsedRepo = RepoJSONParser.parseJSON(data)
           
           NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
@@ -52,7 +53,7 @@ class GithubService {
       
       if let httpResponse = response as? NSHTTPURLResponse {
         println(httpResponse.statusCode)
-        if httpResponse.statusCode == 200 {
+        if httpResponse.statusCode == self.goodHttpResponse {
 
           NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
             completionHandler(users, nil)
@@ -63,7 +64,7 @@ class GithubService {
     dataTask.resume()
   }
   
-  func getLoggedInUsersForSearch(completionHandler : (LoggedInUserGitData?, String?) -> (Void)) {
+  func getLoggedInUsersForSearch(completionHandler : (AuthenticatedUserGitData?, String?) -> (Void)) {
     
     let userUrl = "https://api.github.com/user"
     let request = NSMutableURLRequest(URL: NSURL(string: userUrl)!)
@@ -72,11 +73,10 @@ class GithubService {
     }
     
     let dataTask = NSURLSession.sharedSession().dataTaskWithRequest(request, completionHandler: { (data, response, error) -> Void in
-      let user = LoggedInUserJSONParser.parseJSON(data)
+      let user = AuthenticatedUserJSONParser.parseJSON(data)
       
       if let httpResponse = response as? NSHTTPURLResponse {
-        println(httpResponse.statusCode)
-        if httpResponse.statusCode == 200 {
+        if httpResponse.statusCode == self.goodHttpResponse {
 
           NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
             completionHandler(user, nil)

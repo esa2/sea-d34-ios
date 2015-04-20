@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		F4135F701AE231F400564324 /* LoggedInUserGitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4135F6F1AE231F400564324 /* LoggedInUserGitData.swift */; };
-		F4135F721AE2330200564324 /* LoggedInUserJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4135F711AE2330200564324 /* LoggedInUserJSONParser.swift */; };
+		F4135F701AE231F400564324 /* AuthenticatedUserGitData.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4135F6F1AE231F400564324 /* AuthenticatedUserGitData.swift */; };
+		F4135F721AE2330200564324 /* AuthenticatedUserJSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4135F711AE2330200564324 /* AuthenticatedUserJSONParser.swift */; };
 		F41A519E1AE1E6EA00AF6535 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41A519D1AE1E6EA00AF6535 /* WebViewController.swift */; };
 		F41BFB5D1ADDB01400D7EF75 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41BFB5C1ADDB01400D7EF75 /* Constants.swift */; };
 		F41BFB5F1ADDB24500D7EF75 /* githubIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = F41BFB5E1ADDB24500D7EF75 /* githubIcon.png */; };
@@ -52,8 +52,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F4135F6F1AE231F400564324 /* LoggedInUserGitData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInUserGitData.swift; sourceTree = "<group>"; };
-		F4135F711AE2330200564324 /* LoggedInUserJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoggedInUserJSONParser.swift; sourceTree = "<group>"; };
+		F4135F6F1AE231F400564324 /* AuthenticatedUserGitData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticatedUserGitData.swift; sourceTree = "<group>"; };
+		F4135F711AE2330200564324 /* AuthenticatedUserJSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthenticatedUserJSONParser.swift; sourceTree = "<group>"; };
 		F41A519D1AE1E6EA00AF6535 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		F41BFB5C1ADDB01400D7EF75 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F41BFB5E1ADDB24500D7EF75 /* githubIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = githubIcon.png; sourceTree = "<group>"; };
@@ -199,8 +199,8 @@
 				F4F961791ADDA15C000C86E7 /* RepoJSONParser.swift */,
 				F452DAF01AE01D8C0001D458 /* UserGitData.swift */,
 				F452DAEE1AE01CA20001D458 /* UserJSONParser.swift */,
-				F4135F6F1AE231F400564324 /* LoggedInUserGitData.swift */,
-				F4135F711AE2330200564324 /* LoggedInUserJSONParser.swift */,
+				F4135F6F1AE231F400564324 /* AuthenticatedUserGitData.swift */,
+				F4135F711AE2330200564324 /* AuthenticatedUserJSONParser.swift */,
 				F446EDBB1AE1D1D80016BF8C /* doh.mp3 */,
 				F446EDBD1AE1D2900016BF8C /* uhoh.mp3 */,
 				F4F961531ADD7BC4000C86E7 /* AppDelegate.swift */,
@@ -325,13 +325,13 @@
 				F44E87DE1ADED85300A079B4 /* OauthService.swift in Sources */,
 				F452DAE91AE010FA0001D458 /* UserDetailViewController.swift in Sources */,
 				F4416B8A1AE2BEB400FAEDA5 /* MyProfileViewController.swift in Sources */,
-				F4135F721AE2330200564324 /* LoggedInUserJSONParser.swift in Sources */,
+				F4135F721AE2330200564324 /* AuthenticatedUserJSONParser.swift in Sources */,
 				F452DAEB1AE012450001D458 /* ImageDownloadService.swift in Sources */,
 				F452DAEF1AE01CA20001D458 /* UserJSONParser.swift in Sources */,
 				F41BFB5D1ADDB01400D7EF75 /* Constants.swift in Sources */,
 				F4F961751ADD865A000C86E7 /* RepoSearchViewController.swift in Sources */,
 				F452DAE71AE0105D0001D458 /* UserSearchViewController.swift in Sources */,
-				F4135F701AE231F400564324 /* LoggedInUserGitData.swift in Sources */,
+				F4135F701AE231F400564324 /* AuthenticatedUserGitData.swift in Sources */,
 				F4F961561ADD7BC4000C86E7 /* MainMenuViewController.swift in Sources */,
 				F452DAF11AE01D8C0001D458 /* UserGitData.swift in Sources */,
 				F4F9617A1ADDA15C000C86E7 /* RepoJSONParser.swift in Sources */,
