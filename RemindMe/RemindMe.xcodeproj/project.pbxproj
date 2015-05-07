@@ -1,0 +1,832 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F426F2261AF2DF1300C29BDC /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F426F2251AF2DF1300C29BDC /* main.m */; };
+		F426F2291AF2DF1300C29BDC /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F426F2281AF2DF1300C29BDC /* AppDelegate.m */; };
+		F426F22C1AF2DF1300C29BDC /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F426F22B1AF2DF1300C29BDC /* MapViewController.m */; };
+		F426F22F1AF2DF1300C29BDC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F426F22D1AF2DF1300C29BDC /* Main.storyboard */; };
+		F426F2311AF2DF1300C29BDC /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F426F2301AF2DF1300C29BDC /* Images.xcassets */; };
+		F426F2341AF2DF1300C29BDC /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = F426F2321AF2DF1300C29BDC /* LaunchScreen.xib */; };
+		F426F2401AF2DF1300C29BDC /* RemindMeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F426F23F1AF2DF1300C29BDC /* RemindMeTests.m */; };
+		F426F24A1AF2DF4C00C29BDC /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F426F2491AF2DF4C00C29BDC /* GoogleMaps.framework */; };
+		F426F24C1AF2DF6200C29BDC /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F426F24B1AF2DF6200C29BDC /* GoogleMaps.bundle */; };
+		F426F24E1AF2DFBB00C29BDC /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F426F24D1AF2DFBB00C29BDC /* AVFoundation.framework */; };
+		F426F2501AF2DFD900C29BDC /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F426F24F1AF2DFD900C29BDC /* CoreData.framework */; };
+		F426F2521AF2E03B00C29BDC /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F426F2511AF2E03B00C29BDC /* GLKit.framework */; };
+		F426F2541AF2E07700C29BDC /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F426F2531AF2E07700C29BDC /* ImageIO.framework */; };
+		F426F2561AF2E08800C29BDC /* libc++.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F426F2551AF2E08800C29BDC /* libc++.dylib */; };
+		F426F2581AF2E0A900C29BDC /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F426F2571AF2E0A900C29BDC /* libicucore.dylib */; };
+		F426F25A1AF2E0C200C29BDC /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = F426F2591AF2E0C200C29BDC /* libz.dylib */; };
+		F426F25C1AF2E0D800C29BDC /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F426F25B1AF2E0D800C29BDC /* OpenGLES.framework */; };
+		F426F25E1AF2E0FA00C29BDC /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F426F25D1AF2E0FA00C29BDC /* QuartzCore.framework */; };
+		F426F2601AF2E10D00C29BDC /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F426F25F1AF2E10D00C29BDC /* SystemConfiguration.framework */; };
+		F426F2621AF2E14F00C29BDC /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F426F2611AF2E14F00C29BDC /* CoreText.framework */; };
+		F45DE0541AFAA70B00A15091 /* CustomRowController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4824AE01AF9C44700102474 /* CustomRowController.m */; };
+		F46831161AF334000051A1A4 /* CfViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F46831151AF334000051A1A4 /* CfViewController.m */; };
+		F4824AB81AF9B56000102474 /* InterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4824AB71AF9B56000102474 /* InterfaceController.m */; };
+		F4824ABB1AF9B56000102474 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4824ABA1AF9B56000102474 /* NotificationController.m */; };
+		F4824ABE1AF9B56000102474 /* GlanceController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4824ABD1AF9B56000102474 /* GlanceController.m */; };
+		F4824AC01AF9B56000102474 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4824ABF1AF9B56000102474 /* Images.xcassets */; };
+		F4824AC41AF9B56000102474 /* RemindMe WatchKit App.app in Resources */ = {isa = PBXBuildFile; fileRef = F4824AC31AF9B56000102474 /* RemindMe WatchKit App.app */; };
+		F4824ACC1AF9B56000102474 /* Interface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F4824ACA1AF9B56000102474 /* Interface.storyboard */; };
+		F4824ACE1AF9B56000102474 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F4824ACD1AF9B56000102474 /* Images.xcassets */; };
+		F4824AD11AF9B56000102474 /* RemindMe WatchKit Extension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = F4824AB11AF9B56000102474 /* RemindMe WatchKit Extension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		F4824ADE1AF9BF8400102474 /* MapInterfaceController.m in Sources */ = {isa = PBXBuildFile; fileRef = F4824ADD1AF9BF8400102474 /* MapInterfaceController.m */; };
+		F488252E1AF42D54001EDF33 /* bolt1.png in Resources */ = {isa = PBXBuildFile; fileRef = F488252D1AF42D54001EDF33 /* bolt1.png */; };
+		F4917B8A1AF5548800256325 /* StackAndQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = F4917B891AF5548800256325 /* StackAndQueue.m */; };
+		F49C89601AF7DFAE00847D0B /* cfLogo2.png in Resources */ = {isa = PBXBuildFile; fileRef = F49C895F1AF7DFAE00847D0B /* cfLogo2.png */; };
+		F49C89631AF7E16000847D0B /* AddReminderViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F49C89621AF7E16000847D0B /* AddReminderViewController.m */; };
+		F4A44B441AF686B70069593E /* c2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = F4A44B431AF686B70069593E /* c2.mp3 */; };
+		F4D09BB21AF5BBC900E5C61C /* StackAndQueue.h in Sources */ = {isa = PBXBuildFile; fileRef = F4D09BB11AF5BBC900E5C61C /* StackAndQueue.h */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F426F23A1AF2DF1300C29BDC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F426F2181AF2DF1200C29BDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F426F21F1AF2DF1300C29BDC;
+			remoteInfo = RemindMe;
+		};
+		F4824AC51AF9B56000102474 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F426F2181AF2DF1200C29BDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4824AC21AF9B56000102474;
+			remoteInfo = "RemindMe WatchKit App";
+		};
+		F4824ACF1AF9B56000102474 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F426F2181AF2DF1200C29BDC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F4824AB01AF9B56000102474;
+			remoteInfo = "RemindMe WatchKit Extension";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F4824AD81AF9B56000102474 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				F4824AD11AF9B56000102474 /* RemindMe WatchKit Extension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		F426F2201AF2DF1300C29BDC /* RemindMe.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RemindMe.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F426F2241AF2DF1300C29BDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F426F2251AF2DF1300C29BDC /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F426F2271AF2DF1300C29BDC /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = RemindMe/AppDelegate.h; sourceTree = "<group>"; };
+		F426F2281AF2DF1300C29BDC /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = RemindMe/AppDelegate.m; sourceTree = "<group>"; };
+		F426F22A1AF2DF1300C29BDC /* MapViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = MapViewController.h; path = RemindMe/MapViewController.h; sourceTree = "<group>"; };
+		F426F22B1AF2DF1300C29BDC /* MapViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = MapViewController.m; path = RemindMe/MapViewController.m; sourceTree = "<group>"; };
+		F426F22E1AF2DF1300C29BDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F426F2301AF2DF1300C29BDC /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F426F2331AF2DF1300C29BDC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		F426F2391AF2DF1300C29BDC /* RemindMeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RemindMeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F426F23E1AF2DF1300C29BDC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F426F23F1AF2DF1300C29BDC /* RemindMeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RemindMeTests.m; sourceTree = "<group>"; };
+		F426F2491AF2DF4C00C29BDC /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		F426F24B1AF2DF6200C29BDC /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		F426F24D1AF2DFBB00C29BDC /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		F426F24F1AF2DFD900C29BDC /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		F426F2511AF2E03B00C29BDC /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		F426F2531AF2E07700C29BDC /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		F426F2551AF2E08800C29BDC /* libc++.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = "libc++.dylib"; path = "usr/lib/libc++.dylib"; sourceTree = SDKROOT; };
+		F426F2571AF2E0A900C29BDC /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		F426F2591AF2E0C200C29BDC /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		F426F25B1AF2E0D800C29BDC /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		F426F25D1AF2E0FA00C29BDC /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		F426F25F1AF2E10D00C29BDC /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		F426F2611AF2E14F00C29BDC /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		F46831141AF334000051A1A4 /* CfViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CfViewController.h; sourceTree = "<group>"; };
+		F46831151AF334000051A1A4 /* CfViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CfViewController.m; sourceTree = "<group>"; };
+		F4824AB11AF9B56000102474 /* RemindMe WatchKit Extension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = "RemindMe WatchKit Extension.appex"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4824AB41AF9B56000102474 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4824AB51AF9B56000102474 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		F4824AB61AF9B56000102474 /* InterfaceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InterfaceController.h; sourceTree = "<group>"; };
+		F4824AB71AF9B56000102474 /* InterfaceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InterfaceController.m; sourceTree = "<group>"; };
+		F4824AB91AF9B56000102474 /* NotificationController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		F4824ABA1AF9B56000102474 /* NotificationController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		F4824ABC1AF9B56000102474 /* GlanceController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlanceController.h; sourceTree = "<group>"; };
+		F4824ABD1AF9B56000102474 /* GlanceController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GlanceController.m; sourceTree = "<group>"; };
+		F4824ABF1AF9B56000102474 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F4824AC31AF9B56000102474 /* RemindMe WatchKit App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "RemindMe WatchKit App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F4824AC91AF9B56000102474 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4824ACB1AF9B56000102474 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Interface.storyboard; sourceTree = "<group>"; };
+		F4824ACD1AF9B56000102474 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		F4824ADC1AF9BF8400102474 /* MapInterfaceController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapInterfaceController.h; sourceTree = "<group>"; };
+		F4824ADD1AF9BF8400102474 /* MapInterfaceController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapInterfaceController.m; sourceTree = "<group>"; };
+		F4824ADF1AF9C44700102474 /* CustomRowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CustomRowController.h; path = "../RemindMe WatchKit App/CustomRowController.h"; sourceTree = "<group>"; };
+		F4824AE01AF9C44700102474 /* CustomRowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = CustomRowController.m; path = "../RemindMe WatchKit App/CustomRowController.m"; sourceTree = "<group>"; };
+		F488252D1AF42D54001EDF33 /* bolt1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = bolt1.png; path = ../bolt1.png; sourceTree = "<group>"; };
+		F4917B891AF5548800256325 /* StackAndQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = StackAndQueue.m; sourceTree = "<group>"; };
+		F49C895F1AF7DFAE00847D0B /* cfLogo2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = cfLogo2.png; sourceTree = "<group>"; };
+		F49C89611AF7E16000847D0B /* AddReminderViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddReminderViewController.h; sourceTree = "<group>"; };
+		F49C89621AF7E16000847D0B /* AddReminderViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddReminderViewController.m; sourceTree = "<group>"; };
+		F4A44B431AF686B70069593E /* c2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = c2.mp3; sourceTree = "<group>"; };
+		F4D09BB11AF5BBC900E5C61C /* StackAndQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StackAndQueue.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F426F21D1AF2DF1300C29BDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F426F2621AF2E14F00C29BDC /* CoreText.framework in Frameworks */,
+				F426F2601AF2E10D00C29BDC /* SystemConfiguration.framework in Frameworks */,
+				F426F25E1AF2E0FA00C29BDC /* QuartzCore.framework in Frameworks */,
+				F426F25C1AF2E0D800C29BDC /* OpenGLES.framework in Frameworks */,
+				F426F25A1AF2E0C200C29BDC /* libz.dylib in Frameworks */,
+				F426F2581AF2E0A900C29BDC /* libicucore.dylib in Frameworks */,
+				F426F2561AF2E08800C29BDC /* libc++.dylib in Frameworks */,
+				F426F2541AF2E07700C29BDC /* ImageIO.framework in Frameworks */,
+				F426F2521AF2E03B00C29BDC /* GLKit.framework in Frameworks */,
+				F426F2501AF2DFD900C29BDC /* CoreData.framework in Frameworks */,
+				F426F24E1AF2DFBB00C29BDC /* AVFoundation.framework in Frameworks */,
+				F426F24A1AF2DF4C00C29BDC /* GoogleMaps.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F426F2361AF2DF1300C29BDC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4824AAE1AF9B56000102474 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F426F2171AF2DF1200C29BDC = {
+			isa = PBXGroup;
+			children = (
+				F436AB8B1AF2EC9A007A628E /* Model */,
+				F436AB8C1AF2ECAB007A628E /* View */,
+				F436AB8D1AF2ECBE007A628E /* Controller */,
+				F426F2221AF2DF1300C29BDC /* RemindMe */,
+				F426F23C1AF2DF1300C29BDC /* RemindMeTests */,
+				F4824AB21AF9B56000102474 /* RemindMe WatchKit Extension */,
+				F4824AC71AF9B56000102474 /* RemindMe WatchKit App */,
+				F426F2211AF2DF1300C29BDC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F426F2211AF2DF1300C29BDC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F426F2201AF2DF1300C29BDC /* RemindMe.app */,
+				F426F2391AF2DF1300C29BDC /* RemindMeTests.xctest */,
+				F4824AB11AF9B56000102474 /* RemindMe WatchKit Extension.appex */,
+				F4824AC31AF9B56000102474 /* RemindMe WatchKit App.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F426F2221AF2DF1300C29BDC /* RemindMe */ = {
+			isa = PBXGroup;
+			children = (
+				F426F2301AF2DF1300C29BDC /* Images.xcassets */,
+				F426F2231AF2DF1300C29BDC /* Supporting Files */,
+			);
+			path = RemindMe;
+			sourceTree = "<group>";
+		};
+		F426F2231AF2DF1300C29BDC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F49C895F1AF7DFAE00847D0B /* cfLogo2.png */,
+				F4A44B431AF686B70069593E /* c2.mp3 */,
+				F488252D1AF42D54001EDF33 /* bolt1.png */,
+				F426F2611AF2E14F00C29BDC /* CoreText.framework */,
+				F426F25F1AF2E10D00C29BDC /* SystemConfiguration.framework */,
+				F426F25D1AF2E0FA00C29BDC /* QuartzCore.framework */,
+				F426F25B1AF2E0D800C29BDC /* OpenGLES.framework */,
+				F426F2591AF2E0C200C29BDC /* libz.dylib */,
+				F426F2571AF2E0A900C29BDC /* libicucore.dylib */,
+				F426F2551AF2E08800C29BDC /* libc++.dylib */,
+				F426F2531AF2E07700C29BDC /* ImageIO.framework */,
+				F426F2511AF2E03B00C29BDC /* GLKit.framework */,
+				F426F24F1AF2DFD900C29BDC /* CoreData.framework */,
+				F426F24D1AF2DFBB00C29BDC /* AVFoundation.framework */,
+				F426F2491AF2DF4C00C29BDC /* GoogleMaps.framework */,
+				F426F24B1AF2DF6200C29BDC /* GoogleMaps.bundle */,
+				F426F2241AF2DF1300C29BDC /* Info.plist */,
+				F426F2251AF2DF1300C29BDC /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F426F23C1AF2DF1300C29BDC /* RemindMeTests */ = {
+			isa = PBXGroup;
+			children = (
+				F426F23F1AF2DF1300C29BDC /* RemindMeTests.m */,
+				F426F23D1AF2DF1300C29BDC /* Supporting Files */,
+			);
+			path = RemindMeTests;
+			sourceTree = "<group>";
+		};
+		F426F23D1AF2DF1300C29BDC /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F426F23E1AF2DF1300C29BDC /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F436AB8B1AF2EC9A007A628E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				F426F2271AF2DF1300C29BDC /* AppDelegate.h */,
+				F426F2281AF2DF1300C29BDC /* AppDelegate.m */,
+				F4D09BB11AF5BBC900E5C61C /* StackAndQueue.h */,
+				F4917B891AF5548800256325 /* StackAndQueue.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		F436AB8C1AF2ECAB007A628E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F426F22D1AF2DF1300C29BDC /* Main.storyboard */,
+				F426F2321AF2DF1300C29BDC /* LaunchScreen.xib */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		F436AB8D1AF2ECBE007A628E /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F426F22A1AF2DF1300C29BDC /* MapViewController.h */,
+				F426F22B1AF2DF1300C29BDC /* MapViewController.m */,
+				F46831141AF334000051A1A4 /* CfViewController.h */,
+				F46831151AF334000051A1A4 /* CfViewController.m */,
+				F49C89611AF7E16000847D0B /* AddReminderViewController.h */,
+				F49C89621AF7E16000847D0B /* AddReminderViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		F4824AB21AF9B56000102474 /* RemindMe WatchKit Extension */ = {
+			isa = PBXGroup;
+			children = (
+				F4824AB61AF9B56000102474 /* InterfaceController.h */,
+				F4824AB71AF9B56000102474 /* InterfaceController.m */,
+				F4824AB91AF9B56000102474 /* NotificationController.h */,
+				F4824ABA1AF9B56000102474 /* NotificationController.m */,
+				F4824ABC1AF9B56000102474 /* GlanceController.h */,
+				F4824ABD1AF9B56000102474 /* GlanceController.m */,
+				F4824ADC1AF9BF8400102474 /* MapInterfaceController.h */,
+				F4824ADD1AF9BF8400102474 /* MapInterfaceController.m */,
+				F4824ADF1AF9C44700102474 /* CustomRowController.h */,
+				F4824AE01AF9C44700102474 /* CustomRowController.m */,
+				F4824ABF1AF9B56000102474 /* Images.xcassets */,
+				F4824AB31AF9B56000102474 /* Supporting Files */,
+			);
+			path = "RemindMe WatchKit Extension";
+			sourceTree = "<group>";
+		};
+		F4824AB31AF9B56000102474 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4824AB41AF9B56000102474 /* Info.plist */,
+				F4824AB51AF9B56000102474 /* PushNotificationPayload.apns */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F4824AC71AF9B56000102474 /* RemindMe WatchKit App */ = {
+			isa = PBXGroup;
+			children = (
+				F4824ACA1AF9B56000102474 /* Interface.storyboard */,
+				F4824ACD1AF9B56000102474 /* Images.xcassets */,
+				F4824AC81AF9B56000102474 /* Supporting Files */,
+			);
+			path = "RemindMe WatchKit App";
+			sourceTree = "<group>";
+		};
+		F4824AC81AF9B56000102474 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F4824AC91AF9B56000102474 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F426F21F1AF2DF1300C29BDC /* RemindMe */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F426F2431AF2DF1300C29BDC /* Build configuration list for PBXNativeTarget "RemindMe" */;
+			buildPhases = (
+				F426F21C1AF2DF1300C29BDC /* Sources */,
+				F426F21D1AF2DF1300C29BDC /* Frameworks */,
+				F426F21E1AF2DF1300C29BDC /* Resources */,
+				F4824AD81AF9B56000102474 /* Embed App Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4824AD01AF9B56000102474 /* PBXTargetDependency */,
+			);
+			name = RemindMe;
+			productName = RemindMe;
+			productReference = F426F2201AF2DF1300C29BDC /* RemindMe.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F426F2381AF2DF1300C29BDC /* RemindMeTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F426F2461AF2DF1300C29BDC /* Build configuration list for PBXNativeTarget "RemindMeTests" */;
+			buildPhases = (
+				F426F2351AF2DF1300C29BDC /* Sources */,
+				F426F2361AF2DF1300C29BDC /* Frameworks */,
+				F426F2371AF2DF1300C29BDC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F426F23B1AF2DF1300C29BDC /* PBXTargetDependency */,
+			);
+			name = RemindMeTests;
+			productName = RemindMeTests;
+			productReference = F426F2391AF2DF1300C29BDC /* RemindMeTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F4824AB01AF9B56000102474 /* RemindMe WatchKit Extension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4824AD71AF9B56000102474 /* Build configuration list for PBXNativeTarget "RemindMe WatchKit Extension" */;
+			buildPhases = (
+				F4824AAD1AF9B56000102474 /* Sources */,
+				F4824AAE1AF9B56000102474 /* Frameworks */,
+				F4824AAF1AF9B56000102474 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F4824AC61AF9B56000102474 /* PBXTargetDependency */,
+			);
+			name = "RemindMe WatchKit Extension";
+			productName = "RemindMe WatchKit Extension";
+			productReference = F4824AB11AF9B56000102474 /* RemindMe WatchKit Extension.appex */;
+			productType = "com.apple.product-type.watchkit-extension";
+		};
+		F4824AC21AF9B56000102474 /* RemindMe WatchKit App */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F4824AD61AF9B56000102474 /* Build configuration list for PBXNativeTarget "RemindMe WatchKit App" */;
+			buildPhases = (
+				F4824AC11AF9B56000102474 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "RemindMe WatchKit App";
+			productName = "RemindMe WatchKit App";
+			productReference = F4824AC31AF9B56000102474 /* RemindMe WatchKit App.app */;
+			productType = "com.apple.product-type.application.watchapp";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F426F2181AF2DF1200C29BDC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0630;
+				ORGANIZATIONNAME = "Ed Abrahamsen";
+				TargetAttributes = {
+					F426F21F1AF2DF1300C29BDC = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					F426F2381AF2DF1300C29BDC = {
+						CreatedOnToolsVersion = 6.3.1;
+						TestTargetID = F426F21F1AF2DF1300C29BDC;
+					};
+					F4824AB01AF9B56000102474 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+					F4824AC21AF9B56000102474 = {
+						CreatedOnToolsVersion = 6.3.1;
+					};
+				};
+			};
+			buildConfigurationList = F426F21B1AF2DF1200C29BDC /* Build configuration list for PBXProject "RemindMe" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F426F2171AF2DF1200C29BDC;
+			productRefGroup = F426F2211AF2DF1300C29BDC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F426F21F1AF2DF1300C29BDC /* RemindMe */,
+				F426F2381AF2DF1300C29BDC /* RemindMeTests */,
+				F4824AB01AF9B56000102474 /* RemindMe WatchKit Extension */,
+				F4824AC21AF9B56000102474 /* RemindMe WatchKit App */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F426F21E1AF2DF1300C29BDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F426F22F1AF2DF1300C29BDC /* Main.storyboard in Resources */,
+				F426F2341AF2DF1300C29BDC /* LaunchScreen.xib in Resources */,
+				F49C89601AF7DFAE00847D0B /* cfLogo2.png in Resources */,
+				F488252E1AF42D54001EDF33 /* bolt1.png in Resources */,
+				F426F2311AF2DF1300C29BDC /* Images.xcassets in Resources */,
+				F426F24C1AF2DF6200C29BDC /* GoogleMaps.bundle in Resources */,
+				F4A44B441AF686B70069593E /* c2.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F426F2371AF2DF1300C29BDC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4824AAF1AF9B56000102474 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4824AC01AF9B56000102474 /* Images.xcassets in Resources */,
+				F4824AC41AF9B56000102474 /* RemindMe WatchKit App.app in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4824AC11AF9B56000102474 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4824ACC1AF9B56000102474 /* Interface.storyboard in Resources */,
+				F4824ACE1AF9B56000102474 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F426F21C1AF2DF1300C29BDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F426F22C1AF2DF1300C29BDC /* MapViewController.m in Sources */,
+				F4917B8A1AF5548800256325 /* StackAndQueue.m in Sources */,
+				F46831161AF334000051A1A4 /* CfViewController.m in Sources */,
+				F426F2291AF2DF1300C29BDC /* AppDelegate.m in Sources */,
+				F49C89631AF7E16000847D0B /* AddReminderViewController.m in Sources */,
+				F4D09BB21AF5BBC900E5C61C /* StackAndQueue.h in Sources */,
+				F426F2261AF2DF1300C29BDC /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F426F2351AF2DF1300C29BDC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F426F2401AF2DF1300C29BDC /* RemindMeTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F4824AAD1AF9B56000102474 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F4824ADE1AF9BF8400102474 /* MapInterfaceController.m in Sources */,
+				F4824ABB1AF9B56000102474 /* NotificationController.m in Sources */,
+				F4824AB81AF9B56000102474 /* InterfaceController.m in Sources */,
+				F4824ABE1AF9B56000102474 /* GlanceController.m in Sources */,
+				F45DE0541AFAA70B00A15091 /* CustomRowController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F426F23B1AF2DF1300C29BDC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F426F21F1AF2DF1300C29BDC /* RemindMe */;
+			targetProxy = F426F23A1AF2DF1300C29BDC /* PBXContainerItemProxy */;
+		};
+		F4824AC61AF9B56000102474 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4824AC21AF9B56000102474 /* RemindMe WatchKit App */;
+			targetProxy = F4824AC51AF9B56000102474 /* PBXContainerItemProxy */;
+		};
+		F4824AD01AF9B56000102474 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F4824AB01AF9B56000102474 /* RemindMe WatchKit Extension */;
+			targetProxy = F4824ACF1AF9B56000102474 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F426F22D1AF2DF1300C29BDC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F426F22E1AF2DF1300C29BDC /* Base */,
+			);
+			name = Main.storyboard;
+			path = RemindMe;
+			sourceTree = "<group>";
+		};
+		F426F2321AF2DF1300C29BDC /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F426F2331AF2DF1300C29BDC /* Base */,
+			);
+			name = LaunchScreen.xib;
+			path = RemindMe;
+			sourceTree = "<group>";
+		};
+		F4824ACA1AF9B56000102474 /* Interface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F4824ACB1AF9B56000102474 /* Base */,
+			);
+			name = Interface.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F426F2411AF2DF1300C29BDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F426F2421AF2DF1300C29BDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F426F2441AF2DF1300C29BDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RemindMe",
+				);
+				INFOPLIST_FILE = RemindMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F426F2451AF2DF1300C29BDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RemindMe",
+				);
+				INFOPLIST_FILE = RemindMe/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		F426F2471AF2DF1300C29BDC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RemindMeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RemindMe.app/RemindMe";
+			};
+			name = Debug;
+		};
+		F426F2481AF2DF1300C29BDC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = RemindMeTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/RemindMe.app/RemindMe";
+			};
+			name = Release;
+		};
+		F4824AD21AF9B56000102474 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "RemindMe WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		F4824AD31AF9B56000102474 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "RemindMe WatchKit Extension/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_NAME = "${TARGET_NAME}";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		F4824AD41AF9B56000102474 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				IBSC_MODULE = RemindMe_WatchKit_Extension;
+				INFOPLIST_FILE = "RemindMe WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Debug;
+		};
+		F4824AD51AF9B56000102474 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				IBSC_MODULE = RemindMe_WatchKit_Extension;
+				INFOPLIST_FILE = "RemindMe WatchKit App/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.2;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = 4;
+				"TARGETED_DEVICE_FAMILY[sdk=iphonesimulator*]" = "1,4";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F426F21B1AF2DF1200C29BDC /* Build configuration list for PBXProject "RemindMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F426F2411AF2DF1300C29BDC /* Debug */,
+				F426F2421AF2DF1300C29BDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F426F2431AF2DF1300C29BDC /* Build configuration list for PBXNativeTarget "RemindMe" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F426F2441AF2DF1300C29BDC /* Debug */,
+				F426F2451AF2DF1300C29BDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F426F2461AF2DF1300C29BDC /* Build configuration list for PBXNativeTarget "RemindMeTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F426F2471AF2DF1300C29BDC /* Debug */,
+				F426F2481AF2DF1300C29BDC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4824AD61AF9B56000102474 /* Build configuration list for PBXNativeTarget "RemindMe WatchKit App" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4824AD41AF9B56000102474 /* Debug */,
+				F4824AD51AF9B56000102474 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F4824AD71AF9B56000102474 /* Build configuration list for PBXNativeTarget "RemindMe WatchKit Extension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F4824AD21AF9B56000102474 /* Debug */,
+				F4824AD31AF9B56000102474 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F426F2181AF2DF1200C29BDC /* Project object */;
+}

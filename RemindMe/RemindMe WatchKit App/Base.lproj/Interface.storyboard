@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="7702" systemVersion="14D136" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="HXk-RF-S6j">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7701"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="3737"/>
+    </dependencies>
+    <scenes>
+        <!--Reminders-->
+        <scene sceneID="XNr-FU-TpU">
+            <objects>
+                <controller identifier="TableRows" title="Reminders" id="HXk-RF-S6j" customClass="InterfaceController">
+                    <items>
+                        <table alignment="left" id="8U9-CW-3Tu">
+                            <items>
+                                <tableRow identifier="Rows" id="x2M-EE-vai" customClass="CustomRowController">
+                                    <group key="rootItem" width="1" height="43.5" alignment="left" id="Bad-dD-Bbd">
+                                        <items>
+                                            <label alignment="left" text="Label" id="UW6-Fa-5Eo"/>
+                                        </items>
+                                        <connections>
+                                            <segue destination="M6r-Js-XfY" kind="push" identifier="MapSegue" id="CoM-Cd-Jcx"/>
+                                        </connections>
+                                    </group>
+                                    <connections>
+                                        <outlet property="name" destination="UW6-Fa-5Eo" id="mfa-7k-i99"/>
+                                    </connections>
+                                </tableRow>
+                            </items>
+                        </table>
+                    </items>
+                    <connections>
+                        <outlet property="interfaceTable" destination="8U9-CW-3Tu" id="8ft-jZ-0kO"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="451" y="415"/>
+        </scene>
+        <!--MapController-->
+        <scene sceneID="jBf-zf-QQB">
+            <objects>
+                <controller identifier="MapController" id="M6r-Js-XfY" customClass="MapInterfaceController">
+                    <items>
+                        <map height="119" alignment="left" id="FBM-VB-nj0"/>
+                    </items>
+                    <connections>
+                        <outlet property="mapView" destination="FBM-VB-nj0" id="BS9-EH-ni3"/>
+                    </connections>
+                </controller>
+            </objects>
+            <point key="canvasLocation" x="678" y="414"/>
+        </scene>
+        <!--Glance Interface Controller-->
+        <scene sceneID="BOz-TT-tkC">
+            <objects>
+                <glanceController spacing="0.0" id="0uZ-2p-rRc" customClass="GlanceController">
+                    <items>
+                        <group alignment="left" id="t8f-Gd-c4y"/>
+                        <group alignment="left" id="uCw-4Q-Ouw"/>
+                    </items>
+                    <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="14"/>
+                </glanceController>
+            </objects>
+            <point key="canvasLocation" x="-23" y="682"/>
+        </scene>
+        <!--Static Notification Interface Controller-->
+        <scene sceneID="AEw-b0-oYE">
+            <objects>
+                <notificationController id="YCC-NB-fut">
+                    <items>
+                        <label alignment="left" text="Alert Label" id="XkS-y5-khE"/>
+                    </items>
+                    <notificationCategory key="notificationCategory" identifier="myCategory" id="JfB-70-Muf"/>
+                    <connections>
+                        <outlet property="notificationAlertLabel" destination="XkS-y5-khE" id="49B-RR-99y"/>
+                        <segue destination="gdX-wl-uQE" kind="relationship" relationship="dynamicNotificationInterface" id="fKh-qV-3T2"/>
+                    </connections>
+                </notificationController>
+            </objects>
+            <point key="canvasLocation" x="229" y="682"/>
+        </scene>
+        <!--Notification Controller-->
+        <scene sceneID="KIl-fV-djm">
+            <objects>
+                <controller id="gdX-wl-uQE" customClass="NotificationController"/>
+            </objects>
+            <point key="canvasLocation" x="477" y="682"/>
+        </scene>
+    </scenes>
+</document>
