@@ -12,7 +12,7 @@
 #import "Reservation.h"
 #import "Hotel.h"
 
-@interface ReservationViewController ()
+@interface ReservationViewController ()  <UITextFieldDelegate>
 
 @property (strong, nonatomic) UITextField *firstNameField;
 @property (strong, nonatomic) UITextField *lastNameField;
@@ -68,7 +68,6 @@
   [self.homeButton setTitle:@" Home " forState:UIControlStateNormal];
   [self.homeButton addTarget:self action:@selector(homePressed) forControlEvents:UIControlEventTouchUpInside];
 
-  
   NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
   dateFormatter.dateStyle = NSDateFormatterMediumStyle;
   NSString *formatStartDate = [dateFormatter stringFromDate:self.startDate];
@@ -101,6 +100,8 @@
     
     self.homeButton.backgroundColor = [UIColor blueColor];
     [self.homeButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    
+    [[UIApplication sharedApplication] sendAction:@selector(resignFirstResponder) to:nil from:nil forEvent:nil];
   }
 }
 
@@ -123,8 +124,7 @@
     [self.view addConstraints:constraints];
   }
   
-  
-    NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-80-[firstName]-20-[lastName]-20-[reservation]-20-[hotelName]-20-[roomNumber]-20-[roomService]-20-[pool]-20-[startDate]-20-[endDate]-20-[price]-40-[home]-120-|" options:0 metrics:nil views:views];
+  NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-80-[firstName]-20-[lastName]-20-[reservation]-20-[hotelName]-20-[roomNumber]-20-[roomService]-20-[pool]-20-[startDate]-20-[endDate]-20-[price]-40-[home]-120-|" options:0 metrics:nil views:views];
     [self.view addConstraints:verticalConstraints];
   
   //  NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-80-[hotelName]-20-[roomNumber]-20-[roomService]-20-[pool]-20-[startDate]-20-[endDate]-20-[price]-20-[firstName]-20-[lastName]-20-[reservation]-40-[home]-120-|" options:0 metrics:nil views:views];
