@@ -123,9 +123,13 @@
     [self.view addConstraints:constraints];
   }
   
-  NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-80-[hotelName]-20-[roomNumber]-20-[roomService]-20-[pool]-20-[startDate]-20-[endDate]-20-[price]-20-[firstName]-20-[lastName]-20-[reservation]-40-[home]-120-|" options:0 metrics:nil views:views];
-  [self.view addConstraints:verticalConstraints];
   
+    NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-80-[firstName]-20-[lastName]-20-[reservation]-20-[hotelName]-20-[roomNumber]-20-[roomService]-20-[pool]-20-[startDate]-20-[endDate]-20-[price]-40-[home]-120-|" options:0 metrics:nil views:views];
+    [self.view addConstraints:verticalConstraints];
+  
+  //  NSArray *verticalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|-80-[hotelName]-20-[roomNumber]-20-[roomService]-20-[pool]-20-[startDate]-20-[endDate]-20-[price]-20-[firstName]-20-[lastName]-20-[reservation]-40-[home]-120-|" options:0 metrics:nil views:views];
+//  [self.view addConstraints:verticalConstraints];
+
   //  NSArray *horizontalConstraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[reservation]|" options:0 metrics:nil views:views];
   //  [self.view addConstraints:horizontalConstraints];
   
